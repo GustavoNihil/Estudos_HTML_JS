@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        div {
+            height: 400px;
+            width: 500px;
+            background-color: antiquewhite;
+            padding: 15px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        h1 {
+            margin: auto;
+            text-align: center;
+        }
+        #resultado {
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Vamos contar</h1>
+    <div>
+        <p>Inicio: <input type="number" name="tin" id="tin"></p>
+        <p>Fim: <input type="number" name="tfim" id="tfim"></p>
+        <p>Passo: <input type="number" name="tpasso" id="tpasso"></p>
+        <p><input type="button" value="Contar" onclick="contar()"></p>
+
+        <p id="resultado"></p>
+
+    </div>
+    
+    <script>
+        function contar() {
+            var tin = document.getElementById('tin')
+            var nin = Number(tin.value)
+            var tfim = document.getElementById('tfim')
+            var nfim = Number(tfim.value)
+            var tpasso = document.getElementById('tpasso')
+            var npasso = Number(tpasso.value)
+            var res = document.getElementById('resultado')
+
+            res.innerHTML = '<strong>Contando:</strong> '
+            /*for(var c = nin; c <= nfim; c = c + npasso) {
+
+            }*/
+            if (nin < nfim) {
+                while (nin + npasso <= nfim) {
+                /*Contagem crescente*/
+                res.innerHTML += `<strong>${nin}</strong> `
+                nin = nin + npasso
+                }
+            } else {
+                while (nin - npasso >= nfim) {
+                /*Contagem regressiva*/
+                res.innerHTML += `<strong>${nin}</strong> `
+                nin = nin - npasso
+                }
+            }
+            
+            res.innerHTML += `<strong>${nin}</strong> <strong>Fim.</strong>`
+        }
+
+    </script>
+
+
+</body>
+</html>
+
+
+

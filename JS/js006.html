@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <div>Velocidade do carro: <input type="number" name="tvel" id="tvel"> km/h </div>
+    <div>Velocidade da via: <input type="number" name="tvl" id="tvl"> km/h </div>
+    <input type="button" value="Consultar" onclick="consultar()">
+    <div id="conf">Confirmando</div>
+    <div id="res">Resultado</div>
+    <script>
+
+        function consultar() {
+            var tvel = document.getElementById('tvel')
+            var nvel = Number(tvel.value)
+            var tvl = document.getElementById('tvl')
+            var vl = Number(tvl.value)
+            var vl = vl + vl/10
+
+            conf.innerHTML = (`Sua velocidade atual é de <strong>${nvel}km/h</strong> e a velocidade máxima da via é de <strong>${vl}km/h</strong>.`)
+            if (nvel <= vl) {
+                res.innerText = ('Você não foi multado.')
+            } else {
+                res.innerText = (`Você foi multado por exceder em ${nvel-vl}km/h o limite de velocidade da via.`)
+            }
+        }
+    </script>
+
+
+</body>
+</html>

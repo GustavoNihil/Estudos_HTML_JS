@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aprendendo JavaScript</title>
+
+        <style>
+            body {
+                font: normal 20px Arial;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>Iniciando com JS</h1>
+        <h2 id="id">Eu tenho probleminha</h2>
+        
+
+        <script>
+            //var n1 = Number.parseFloat/*Transforma em números Reais*/(window.prompt("Digite um número:"));
+            //var n2 = Number.parseFloat(prompt("Digite um segundo número:"));
+            //Number.parseFloat(n1)
+            //Number.parseFloat(n2)
+            //var soma = n1 + n2;
+            //alert(`A soma dos números supradigitados é: ${soma}`); /*Entre "``" (crases) posso usar "${}" com a variável dentro no lugar da concatenação*/
+            var h1 = window.document.getElementsByTagName('h1')[0]
+            var corpo = window.document.body
+            corpo.style.background = 'blue'
+            window.document.write('O h1 da página é: ' + h1.innerText)
+            var id = window.document.getElementById('id')
+            id.style.background = 'green'
+
+
+        </script>
+
+    </body>
+</html>
+
+

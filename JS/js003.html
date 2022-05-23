@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aprendendo JavaScript</title>
+
+        <style>
+            :root {
+                --cor01: rgb(121, 17, 17);
+            }
+            body {
+                font: normal 16px Arial;
+            }
+            h1#area {
+                background-color: aquamarine;
+                display: block;
+                height: 200px;
+                width: 200px;
+                text-align: center;
+                line-height: 66px;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        <h1 id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Iniciando com JS<br>
+        (Interaja)</h1>
+        
+        
+
+        <script>
+            var a = document.getElementById('area')
+            function clicar() {
+                a.innerText = 'Clicou :D'
+                a.style.background = 'var(--cor01)'
+            }
+            function entrar() {
+                a.innerText = 'Entrou /o/'
+                a.style.background = "aquamarine"
+            }
+            function sair() {
+                a.innerText = 'Saiu :c'
+                a.style.background = 'aquamarine'
+            }
+           
+
+
+        </script>
+
+    </body>
+</html>
+
+
