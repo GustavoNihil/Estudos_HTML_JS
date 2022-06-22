@@ -1,0 +1,24 @@
+[
+    {
+        "nome": "Gustavo",
+        "idade": "19",
+        "ornitorrinco": {
+            "idade": 42,
+            "glândulas lactantes": null
+        },
+        "profissão": ["físico", "programador"],
+        "hobbis": ["skt", "programar", "jooj"]
+    },
+    {
+        "nome": "Pedrinho",
+        "hoje tem oque": "campeonato"
+    }
+]
+
+
+
+
+
+
+
+
